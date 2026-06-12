@@ -51,13 +51,13 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T004 | `Dockerfile` + `.dockerignore` (uv, build-ready) | WP01 | [D] |
 | T005 | Generate `uv.lock` via `uv lock` | WP01 | | [D] |
 | T006 | Import smoke check | WP01 | | [D] |
-| T007 | `_meta.py` — `build_meta` / `append_meta` | WP02 | [P] |
-| T008 | `errors.py` — JSON-RPC codes + coded-error helper | WP02 | [P] |
-| T009 | `pagination.py` — opaque cursor codec, page slice, `-32602` | WP02 | [P] |
-| T010 | `profiles.py` — 4 profiles + capability matrix + gating helpers | WP02 | [P] |
-| T011 | `session.py` — per-session store (requestCount, caps, transport) | WP02 | [P] |
-| T012 | `registry.py` + `tools/__init__.py` — auto-discovery `register_all` | WP02 | |
-| T013 | `tests/test_core.py` — codec/profiles/meta/session units | WP02 | |
+| T007 | `_meta.py` — `build_meta` / `append_meta` | WP02 | [D] |
+| T008 | `errors.py` — JSON-RPC codes + coded-error helper | WP02 | [D] |
+| T009 | `pagination.py` — opaque cursor codec, page slice, `-32602` | WP02 | [D] |
+| T010 | `profiles.py` — 4 profiles + capability matrix + gating helpers | WP02 | [D] |
+| T011 | `session.py` — per-session store (requestCount, caps, transport) | WP02 | [D] |
+| T012 | `registry.py` + `tools/__init__.py` — auto-discovery `register_all` | WP02 | | [D] |
+| T013 | `tests/test_core.py` — codec/profiles/meta/session units | WP02 | | [D] |
 | T014 | `server.py` — build FastMCP app, register via registry+profile | WP03 | |
 | T015 | CLI: `--transport {stdio,sse,http}`, `--profile {...}`, `main()` | WP03 | |
 | T016 | Transport run wiring (`app.run` per transport) | WP03 | |
@@ -128,13 +128,13 @@ session, and the auto-discovery registry.
 **Priority**: P0. **Independent test**: `uv run pytest tests/test_core.py`.
 **Depends on**: WP01. **Prompt**: [tasks/WP02-core-primitives.md](tasks/WP02-core-primitives.md) (~350 lines)
 
-- [ ] T007 `_meta.py` (WP02)
-- [ ] T008 `errors.py` (WP02)
-- [ ] T009 `pagination.py` (WP02)
-- [ ] T010 `profiles.py` (WP02)
-- [ ] T011 `session.py` (WP02)
-- [ ] T012 `registry.py` + `tools/__init__.py` (WP02)
-- [ ] T013 `tests/test_core.py` (WP02)
+- [x] T007 `_meta.py` (WP02)
+- [x] T008 `errors.py` (WP02)
+- [x] T009 `pagination.py` (WP02)
+- [x] T010 `profiles.py` (WP02)
+- [x] T011 `session.py` (WP02)
+- [x] T012 `registry.py` + `tools/__init__.py` (WP02)
+- [x] T013 `tests/test_core.py` (WP02)
 
 ### WP03 — Server, transports, profile gating, pagination wiring
 **Goal**: The FastMCP app + CLI that ties everything together: transports, profile-based
