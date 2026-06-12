@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-06-12T18:41:30.852743+00:00",
+  "friendly_name": "mcpbin test server",
+  "mission_id": "01KTYJ79E3X62F6ZN555QA5ZQA",
+  "mission_number": null,
+  "mission_slug": "mcpbin-test-server-01KTYJ79",
+  "mission_type": "software-dev",
+  "slug": "mcpbin-test-server-01KTYJ79",
+  "target_branch": "devs/ruhulla"
+}
