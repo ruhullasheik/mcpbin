@@ -23,8 +23,8 @@ subtasks:
 - T004
 - T005
 - T006
-shell_pid: "3800"
-agent: "claude:opus:implementer:implementer"
+shell_pid: "2520"
+agent: "claude:opus:reviewer:reviewer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -135,3 +135,4 @@ branches manually.
 - 2026-06-12T19:11:21Z – claude:opus:implementer:implementer – shell_pid=3800 – Assigned agent via action command
 - 2026-06-12T19:28:58Z – claude:opus:implementer:implementer – shell_pid=3800 – Added hatch_build.py (packaging build hook, outside declared owned_files) to conditionally force-include repo-root frontend/ only when present — required so the wheel builds and 'import mcpbin' / 'uv sync' succeed before WP14 creates frontend/. No collision with other WP ownership.
 - 2026-06-12T19:29:14Z – claude:opus:implementer:implementer – shell_pid=3800 – Ready for review: uv-managed Python 3.12 scaffold; import smoke check prints 0.1.0; uv.lock resolves fastmcp-only runtime; Docker daemon unavailable so docker build not run.
+- 2026-06-12T19:29:40Z – claude:opus:reviewer:reviewer – shell_pid=2520 – Started review via action command
