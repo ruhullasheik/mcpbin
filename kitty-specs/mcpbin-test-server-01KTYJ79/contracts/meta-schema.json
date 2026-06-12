@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mcpbin.dev/contracts/meta-schema.json",
+  "title": "mcpbin _meta envelope",
+  "description": "Fixed schema for the _meta object that is the final text content block of every mcpbin tool result (FR-013).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["tool", "received", "note"],
+  "properties": {
+    "tool": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name of the tool that was called."
+    },
+    "received": {
+      "type": "object",
+      "description": "Exact raw parsed arguments received from the client, even if the tool ignores them. {} for no-arg tools."
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One human-readable sentence explaining why the response looks the way it does; references an MCP spec section where relevant."
+    }
+  }
+}
