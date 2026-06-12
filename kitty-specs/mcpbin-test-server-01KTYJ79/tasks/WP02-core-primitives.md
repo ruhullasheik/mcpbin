@@ -22,8 +22,8 @@ subtasks:
 - T011
 - T012
 - T013
-shell_pid: "10812"
-agent: "claude:opus:implementer:implementer"
+shell_pid: "11120"
+agent: "claude:opus:reviewer:reviewer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -166,3 +166,4 @@ Planning/base branch **devs/ruhulla**; merge target **devs/ruhulla**. Worktree p
 
 - 2026-06-12T19:36:41Z – claude:opus:implementer:implementer – shell_pid=10812 – Assigned agent via action command
 - 2026-06-12T19:47:35Z – claude:opus:implementer:implementer – shell_pid=10812 – Ready for review: core primitives (_meta, errors, pagination, profiles, session, registry); 36 tests pass
+- 2026-06-12T19:48:59Z – claude:opus:reviewer:reviewer – shell_pid=11120 – Started review via action command
