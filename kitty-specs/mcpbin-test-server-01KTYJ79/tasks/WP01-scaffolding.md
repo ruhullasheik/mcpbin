@@ -23,7 +23,8 @@ subtasks:
 - T004
 - T005
 - T006
-shell_pid: '3800'
+shell_pid: "3800"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -128,3 +129,7 @@ branches manually.
   (this is the anchor for the research.md "verify-on-impl" items).
 - Don't scaffold empty placeholder modules for later WPs — it would collide with their
   ownership.
+
+## Activity Log
+
+- 2026-06-12T19:11:21Z – claude:opus:implementer:implementer – shell_pid=3800 – Assigned agent via action command
