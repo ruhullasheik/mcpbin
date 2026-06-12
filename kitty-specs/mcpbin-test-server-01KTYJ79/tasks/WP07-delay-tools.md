@@ -10,7 +10,7 @@ requirement_refs:
 - NFR-003
 planning_base_branch: devs/ruhulla
 merge_target_branch: devs/ruhulla
-branch_strategy: Planning/base branch devs/ruhulla; completed work merges into devs/ruhulla. Execution worktree is allocated per computed lane from lanes.json.
+branch_strategy: Planning artifacts for this feature were generated on devs/ruhulla. During /spec-kitty.implement this WP may branch from a dependency-specific base, but completed changes must merge back into devs/ruhulla unless the human explicitly redirects the landing branch.
 subtasks:
 - T032
 - T033
