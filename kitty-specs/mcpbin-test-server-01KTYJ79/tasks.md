@@ -45,12 +45,12 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 
 | ID | Description | WP | Parallel |
 |---|---|---|---|
-| T001 | `pyproject.toml` (deps, dev-deps, entry point, package data) | WP01 | |
-| T002 | `.python-version` pin 3.12.x | WP01 | [P] |
-| T003 | `src/mcpbin/__init__.py` with `__version__` | WP01 | [P] |
-| T004 | `Dockerfile` + `.dockerignore` (uv, build-ready) | WP01 | [P] |
-| T005 | Generate `uv.lock` via `uv lock` | WP01 | |
-| T006 | Import smoke check | WP01 | |
+| T001 | `pyproject.toml` (deps, dev-deps, entry point, package data) | WP01 | | [D] |
+| T002 | `.python-version` pin 3.12.x | WP01 | [D] |
+| T003 | `src/mcpbin/__init__.py` with `__version__` | WP01 | [D] |
+| T004 | `Dockerfile` + `.dockerignore` (uv, build-ready) | WP01 | [D] |
+| T005 | Generate `uv.lock` via `uv lock` | WP01 | | [D] |
+| T006 | Import smoke check | WP01 | | [D] |
 | T007 | `_meta.py` — `build_meta` / `append_meta` | WP02 | [P] |
 | T008 | `errors.py` — JSON-RPC codes + coded-error helper | WP02 | [P] |
 | T009 | `pagination.py` — opaque cursor codec, page slice, `-32602` | WP02 | [P] |
@@ -115,12 +115,12 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 **Priority**: P0 (blocks everything). **Independent test**: `uv run python -c "import mcpbin"`.
 **Depends on**: none. **Prompt**: [tasks/WP01-scaffolding.md](tasks/WP01-scaffolding.md) (~200 lines)
 
-- [ ] T001 `pyproject.toml` (WP01)
-- [ ] T002 `.python-version` (WP01)
-- [ ] T003 `src/mcpbin/__init__.py` (WP01)
-- [ ] T004 `Dockerfile` + `.dockerignore` (WP01)
-- [ ] T005 generate `uv.lock` (WP01)
-- [ ] T006 import smoke check (WP01)
+- [x] T001 `pyproject.toml` (WP01)
+- [x] T002 `.python-version` (WP01)
+- [x] T003 `src/mcpbin/__init__.py` (WP01)
+- [x] T004 `Dockerfile` + `.dockerignore` (WP01)
+- [x] T005 generate `uv.lock` (WP01)
+- [x] T006 import smoke check (WP01)
 
 ### WP02 — Core protocol primitives
 **Goal**: Cross-cutting modules every feature depends on: `_meta`, errors, pagination, profiles,
