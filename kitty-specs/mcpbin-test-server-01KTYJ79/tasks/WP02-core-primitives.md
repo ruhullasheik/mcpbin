@@ -165,3 +165,4 @@ Planning/base branch **devs/ruhulla**; merge target **devs/ruhulla**. Worktree p
 ## Activity Log
 
 - 2026-06-12T19:36:41Z – claude:opus:implementer:implementer – shell_pid=10812 – Assigned agent via action command
+- 2026-06-12T19:47:35Z – claude:opus:implementer:implementer – shell_pid=10812 – Ready for review: core primitives (_meta, errors, pagination, profiles, session, registry); 36 tests pass
