@@ -6,5 +6,7 @@
   "mission_slug": "mcpbin-test-server-01KTYJ79",
   "mission_type": "software-dev",
   "slug": "mcpbin-test-server-01KTYJ79",
-  "target_branch": "devs/ruhulla"
+  "target_branch": "devs/ruhulla",
+  "vcs": "git",
+  "source_description": "Build mcpbin per PRD.md — a diagnostic 'httpbin for MCP' test server for MCP client developers, covering 12 protocol feature areas across stdio/HTTP+SSE/Streamable HTTP transports, MCP spec 2025-03-26."
 }

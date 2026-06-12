@@ -1,0 +1,11 @@
+vcs:
+  type: git
+agents:
+  available:
+  - claude
+  auto_commit: true
+project:
+  uuid: 9fe9e5e1-d3dd-4dff-915e-33a6391e0f01
+  slug: mcpbin
+  node_id: 6b0fb7f0ab5c
+  build_id: 10b12098-2c78-4707-b0ea-1d711a2797ab
