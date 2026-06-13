@@ -26,7 +26,8 @@ subtasks:
 - T007
 - T008
 - T009
-shell_pid: '20072'
+shell_pid: "20072"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-13'
   author: tasks
@@ -112,3 +113,7 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
   the container's `FASTMCP_PORT`.
 - The live URL is a placeholder until the maintainer creates the Space (C-005); make that
   obvious so the README isn't misleading. Reviewer: check the placeholder is clearly marked.
+
+## Activity Log
+
+- 2026-06-13T20:24:43Z – claude:opus:implementer:implementer – shell_pid=20072 – Assigned agent via action command
