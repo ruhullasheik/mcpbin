@@ -16,7 +16,8 @@ subtasks:
 - T053
 - T054
 - T055
-shell_pid: '16336'
+shell_pid: "16336"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -89,3 +90,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
   cursor-following loop terminates when `nextCursor` is absent and that the offline/error path
   is exercised (kill `/mcp`, reload).
 - Feature-area grouping needs a name→area mapping; keep it data-driven and easy to extend.
+
+## Activity Log
+
+- 2026-06-13T07:03:21Z – claude:opus:implementer:implementer – shell_pid=16336 – Assigned agent via action command
