@@ -16,7 +16,8 @@ subtasks:
 - T035
 - T036
 - T037
-shell_pid: '18484'
+shell_pid: "18484"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -79,3 +80,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 ## Risks & reviewer guidance
 - Whether validation errors surface as `-32602` vs a tool error depends on FastMCP — reviewer:
   confirm tests assert the actual surfaced behavior rather than an assumed one.
+
+## Activity Log
+
+- 2026-06-13T06:46:58Z – claude:opus:implementer:implementer – shell_pid=18484 – Assigned agent via action command
