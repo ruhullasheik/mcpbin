@@ -69,10 +69,10 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T022 | `tools/echo.py` — 7 echo tools + `_meta` | WP04 | | [D] |
 | T023 | Echo input schemas (string/number/boolean/object/array/all_types) | WP04 | | [D] |
 | T024 | `tests/test_echo.py` — round-trip + `_meta` assertions | WP04 | | [D] |
-| T025 | `tools/response_types.py` — 6 content-type tools | WP05 | |
-| T026 | `assets/test.png` — committed tiny deterministic PNG | WP05 | |
-| T027 | `return_empty` / `_meta` reconciliation (research R5) | WP05 | |
-| T028 | `tests/test_response_types.py` | WP05 | |
+| T025 | `tools/response_types.py` — 6 content-type tools | WP05 | | [D] |
+| T026 | `assets/test.png` — committed tiny deterministic PNG | WP05 | | [D] |
+| T027 | `return_empty` / `_meta` reconciliation (research R5) | WP05 | | [D] |
+| T028 | `tests/test_response_types.py` | WP05 | | [D] |
 | T029 | `tools/errors.py` — 7 error tools (codes + simulated parse) | WP06 | |
 | T030 | `error_tool_level` / `error_unknown_code` semantics | WP06 | |
 | T031 | `tests/test_errors.py` | WP06 | |
@@ -165,10 +165,10 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_response_types.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP05-response-types.md](tasks/WP05-response-types.md) (~250 lines)
 
-- [ ] T025 `tools/response_types.py` (WP05)
-- [ ] T026 `assets/test.png` (WP05)
-- [ ] T027 `return_empty` / `_meta` reconciliation (WP05)
-- [ ] T028 `tests/test_response_types.py` (WP05)
+- [x] T025 `tools/response_types.py` (WP05)
+- [x] T026 `assets/test.png` (WP05)
+- [x] T027 `return_empty` / `_meta` reconciliation (WP05)
+- [x] T028 `tests/test_response_types.py` (WP05)
 
 ### WP06 — Error tools
 **Goal**: 7 error tools spanning JSON-RPC protocol codes, simulated parse, tool-level, unknown.
