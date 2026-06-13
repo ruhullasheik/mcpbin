@@ -17,7 +17,8 @@ subtasks:
 - T022
 - T023
 - T024
-shell_pid: '1752'
+shell_pid: "1752"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -82,3 +83,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 ## Risks & reviewer guidance
 - Confirm `received` reflects the **raw parsed** args (the `_meta` contract). Reviewer: verify
   no type coercion sneaks in (a number stays a number, not a string).
+
+## Activity Log
+
+- 2026-06-13T01:52:39Z – claude:opus:implementer:implementer – shell_pid=1752 – Assigned agent via action command
