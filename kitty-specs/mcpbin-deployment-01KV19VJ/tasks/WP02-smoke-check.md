@@ -100,3 +100,4 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
 
 - 2026-06-13T20:24:33Z – claude:opus:implementer:implementer – shell_pid=16836 – Assigned agent via action command
 - 2026-06-13T20:28:22Z – claude:opus:implementer:implementer – shell_pid=16836 – Smoke check added; passes locally, fails on dead URL
+- 2026-06-13T20:29:27Z – claude:opus:implementer:implementer – shell_pid=16836 – Review: stdlib-only, SSE+JSON, cold-start retries, correct exit codes; passes locally, fails on dead URL

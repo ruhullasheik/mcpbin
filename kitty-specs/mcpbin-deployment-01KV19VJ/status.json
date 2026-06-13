@@ -1,17 +1,17 @@
 {
-  "event_count": 14,
-  "last_event_id": "01KV1ASGP4059CX5R6E1B5QWKP",
-  "materialized_at": "2026-06-13T20:29:22.500278+00:00",
+  "event_count": 16,
+  "last_event_id": "01KV1ASP0PNW2A8QQYKX7X02BJ",
+  "materialized_at": "2026-06-13T20:29:27.958595+00:00",
   "mission_number": "",
   "mission_slug": "mcpbin-deployment-01KV19VJ",
   "mission_type": "software-dev",
   "summary": {
-    "approved": 1,
+    "approved": 2,
     "blocked": 0,
     "canceled": 0,
     "claimed": 0,
     "done": 0,
-    "for_review": 2,
+    "for_review": 1,
     "in_progress": 0,
     "in_review": 0,
     "planned": 0
@@ -27,9 +27,9 @@
     "WP02": {
       "actor": "user",
       "force_count": 1,
-      "lane": "for_review",
-      "last_event_id": "01KV1AQP6848AMEBW0RDWS3KP1",
-      "last_transition_at": "2026-06-13T20:28:22.601018+00:00"
+      "lane": "approved",
+      "last_event_id": "01KV1ASP0PNW2A8QQYKX7X02BJ",
+      "last_transition_at": "2026-06-13T20:29:27.958595+00:00"
     },
     "WP03": {
       "actor": "user",
