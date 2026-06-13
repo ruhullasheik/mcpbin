@@ -82,9 +82,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T035 | `tools/schema.py` — required/optional/enum/nested/array/no-args | WP08 | | [D] |
 | T036 | Schema validation behavior + `_meta` | WP08 | | [D] |
 | T037 | `tests/test_schema.py` | WP08 | | [D] |
-| T038 | `tools/notifications.py` — 4 list/update notifies | WP09 | |
-| T039 | `notify_progress` (≥3) + `notify_log` (all levels) | WP09 | |
-| T040 | `tests/test_notifications.py` | WP09 | |
+| T038 | `tools/notifications.py` — 4 list/update notifies | WP09 | | [D] |
+| T039 | `notify_progress` (≥3) + `notify_log` (all levels) | WP09 | | [D] |
+| T040 | `tests/test_notifications.py` | WP09 | | [D] |
 | T041 | `tools/sampling.py` — simple/system/max_tokens | WP10 | |
 | T042 | `sampling_unsupported` + graceful degradation | WP10 | |
 | T043 | `tests/test_sampling.py` (with sampling-capable mock client) | WP10 | |
@@ -202,9 +202,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_notifications.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP09-notification-tools.md](tasks/WP09-notification-tools.md) (~250 lines)
 
-- [ ] T038 `tools/notifications.py` 4 list/update notifies (WP09)
-- [ ] T039 progress (≥3) + log (all levels) (WP09)
-- [ ] T040 `tests/test_notifications.py` (WP09)
+- [x] T038 `tools/notifications.py` 4 list/update notifies (WP09)
+- [x] T039 progress (≥3) + log (all levels) (WP09)
+- [x] T040 `tests/test_notifications.py` (WP09)
 
 ### WP10 — Sampling tools
 **Goal**: `sampling/createMessage` round-trips + graceful degradation.
