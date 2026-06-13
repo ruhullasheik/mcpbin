@@ -34,7 +34,8 @@ subtasks:
 - T058
 - T059
 - T060
-shell_pid: '16080'
+shell_pid: "16080"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -125,3 +126,7 @@ join lane; depends on all feature lanes).
   integration tests.
 - The R11 sizing tension must be explicitly resolved (accept documented pages, or add real
   variants) — do not silently pad.
+
+## Activity Log
+
+- 2026-06-13T07:06:26Z – claude:opus:implementer:implementer – shell_pid=16080 – Assigned agent via action command
