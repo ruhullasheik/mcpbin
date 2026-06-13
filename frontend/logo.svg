@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="mcpbin logo">
+  <defs>
+    <linearGradient id="mcpbinGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4ec9b0"/>
+      <stop offset="0.55" stop-color="#6cb6ff"/>
+      <stop offset="1" stop-color="#d2a8ff"/>
+    </linearGradient>
+  </defs>
+  <!-- container ("bin") -->
+  <rect x="3" y="3" width="42" height="42" rx="12" fill="#0d1117" stroke="url(#mcpbinGrad)" stroke-width="2.6"/>
+  <!-- protocol graph forming an "m": client -> server -> response -->
+  <path d="M13 33 L20.5 16.5 L24 25 L27.5 16.5 L35 33" fill="none" stroke="url(#mcpbinGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="13" cy="33" r="3.6" fill="#4ec9b0"/>
+  <circle cx="24" cy="25" r="3.4" fill="#6cb6ff"/>
+  <circle cx="35" cy="33" r="3.6" fill="#d2a8ff"/>
+</svg>

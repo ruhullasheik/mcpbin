@@ -231,8 +231,79 @@ function renderPromptCard(p, id) {
   return { card, title, descText: p.description || "" };
 }
 
+let heroEl = null;
+
+function buildHero(counts) {
+  const origin = window.location.origin || "http://localhost:8000";
+  const hero = el("section", "hero");
+  hero.innerHTML = `
+    <div class="hero-top">
+      <img class="hero-logo" src="logo.svg" width="64" height="64" alt="" />
+      <div>
+        <h1 class="hero-title">mcpbin</h1>
+        <p class="hero-tagline">The <a href="https://httpbin.org" target="_blank" rel="noopener">httpbin</a> for the Model Context Protocol.</p>
+      </div>
+    </div>
+    <p class="hero-lead">
+      A deterministic, self-hostable MCP server for <b>MCP client developers</b>. Point your
+      client at mcpbin to verify protocol compliance, validate error handling, and explore edge
+      cases &mdash; without building throwaway servers. Every tool, resource, and prompt has a
+      documented, reproducible response, and every tool result carries a <code>_meta</code> block
+      explaining what the server received and why.
+    </p>
+
+    <div class="chips">
+      <span class="chip">${counts.tools} tools</span>
+      <span class="chip">${counts.resources} resources</span>
+      <span class="chip">${counts.prompts} prompts</span>
+      <span class="chip chip-dim">echo</span>
+      <span class="chip chip-dim">errors</span>
+      <span class="chip chip-dim">delays</span>
+      <span class="chip chip-dim">schema</span>
+      <span class="chip chip-dim">pagination</span>
+      <span class="chip chip-dim">notifications</span>
+      <span class="chip chip-dim">sampling</span>
+    </div>
+
+    <h2 class="hero-h2">How to use it</h2>
+    <ol class="how">
+      <li>
+        <b>Connect your MCP client.</b> Use this running server's endpoint over Streamable HTTP:
+        <pre class="snippet"><span class="j-key">${origin}/mcp</span></pre>
+        or run it locally over stdio (used by most desktop/CLI clients):
+        <pre class="snippet">uv run mcpbin                     <span class="j-null"># stdio (default)</span>
+uv run mcpbin --transport http    <span class="j-null"># this web UI + /mcp</span></pre>
+      </li>
+      <li>
+        <b>Browse or search the catalog.</b> Everything below is the live catalog from
+        <code>/mcp</code>. Use the search box (press <kbd>/</kbd>) to filter by name, description,
+        or URI; tools are grouped by feature area.
+      </li>
+      <li>
+        <b>Exercise edge cases.</b> Call the <code>error_*</code> tools for JSON-RPC error codes,
+        <code>delay_*</code> for timeouts/cancellation, list methods for opaque-cursor pagination,
+        and <code>sampling_*</code> / <code>notify_*</code> for server&rarr;client flows.
+      </li>
+      <li>
+        <b>Inspect the response.</b> Read the <code>_meta</code> block on every result, and call
+        <code>inspect_session</code> to confirm your handshake and negotiated capabilities.
+      </li>
+    </ol>
+
+    <p class="hero-note">
+      Switch capability profiles at startup with <code>--profile {full,tools-only,no-sampling,minimal}</code>
+      to test how your client degrades when a capability is absent. This page is documentation-only
+      &mdash; there is no &ldquo;run tool&rdquo; button.
+    </p>
+  `;
+  return hero;
+}
+
 function renderCatalog(tools, resources, prompts) {
   content.innerHTML = "";
+
+  heroEl = buildHero({ tools: tools.length, resources: resources.length, prompts: prompts.length });
+  content.appendChild(heroEl);
 
   // ---- Tools, grouped by feature area ----
   if (tools.length) {
@@ -325,6 +396,7 @@ function updateCounts() {
 
 function applyFilter(query) {
   const q = query.trim().toLowerCase();
+  if (heroEl) heroEl.hidden = !!q; // focus results while searching
   let anyVisible = false;
   for (const e of entries) {
     const match = !q || e.hay.includes(q);
@@ -380,6 +452,17 @@ function wireSearch() {
   });
 }
 
+function wireBrand() {
+  const brand = document.querySelector(".brand");
+  if (!brand) return;
+  brand.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    const input = document.getElementById("search");
+    if (input.value) { input.value = ""; applyFilter(""); }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
 function wireCollapsers() {
   document.querySelectorAll(".nav-header").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -402,6 +485,7 @@ function showError(listId, message) {
 async function boot() {
   wireCollapsers();
   wireSearch();
+  wireBrand();
   try {
     await initialize();
   } catch (e) {
