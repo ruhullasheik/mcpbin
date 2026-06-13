@@ -27,9 +27,9 @@ work package — it's the post-merge runbook in `quickstart.md` (C-005).
 
 | ID | Description | WP | Parallel |
 |---|---|---|---|
-| T001 | Release workflow skeleton: `v*` tag trigger, `contents: write`, checkout, uv, Python 3.12 | WP01 | [P] |
-| T002 | Test gate (`uv run pytest`) → `uv build` → assert wheel bundles `mcpbin/frontend/` | WP01 | |
-| T003 | Publish: idempotent `gh release` create-or-upload of `dist/*` with `GITHUB_TOKEN` | WP01 | |
+| T001 | Release workflow skeleton: `v*` tag trigger, `contents: write`, checkout, uv, Python 3.12 | WP01 | [P] | [D] |
+| T002 | Test gate (`uv run pytest`) → `uv build` → assert wheel bundles `mcpbin/frontend/` | WP01 | | [D] |
+| T003 | Publish: idempotent `gh release` create-or-upload of `dist/*` with `GITHUB_TOKEN` | WP01 | | [D] |
 | T004 | `smoke_check.py`: stdlib CLI scaffold (base-url arg, timeout, exit codes) | WP02 | [P] |
 | T005 | Check 1 `GET /` 200 + app shell; Check 2 `POST /mcp` initialize reaches MCP; cold-start retries | WP02 | |
 | T006 | Local verification run against `uv run mcpbin --transport http` | WP02 | |
@@ -48,9 +48,9 @@ artifacts to the GitHub Release (close the v0.1.0 stale-artifact gap).
 produces a Release with a wheel containing `mcpbin/frontend/`.
 **Depends on**: none. **Prompt**: [tasks/WP01-release-ci.md](tasks/WP01-release-ci.md) (~180 lines)
 
-- [ ] T001 workflow skeleton (trigger/permissions/setup) (WP01)
-- [ ] T002 test gate + build + bundled assertion (WP01)
-- [ ] T003 idempotent gh release publish (WP01)
+- [x] T001 workflow skeleton (trigger/permissions/setup) (WP01)
+- [x] T002 test gate + build + bundled assertion (WP01)
+- [x] T003 idempotent gh release publish (WP01)
 
 ### WP02 — Live smoke check
 **Goal**: A stdlib-only script that verifies a live base URL (UI 200 + `/mcp` initialize),
