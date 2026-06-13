@@ -11,7 +11,9 @@ ENV UV_COMPILE_BYTECODE=1 \
 WORKDIR /app
 
 # Resolve dependencies first for better layer caching, using the committed lockfile.
-COPY pyproject.toml uv.lock README.md LICENSE ./
+# hatch_build.py is the custom build backend hook; it must be present before the
+# project itself is built (the second `uv sync` below).
+COPY pyproject.toml uv.lock README.md LICENSE hatch_build.py ./
 RUN uv sync --frozen --no-install-project --no-dev
 
 # Copy the project source and the reference frontend, then install the project.
@@ -22,7 +24,9 @@ COPY src ./src
 COPY frontend ./frontend
 RUN uv sync --frozen --no-dev
 
-# Default HTTP transport so the container is reachable.
+# Serve the Streamable HTTP transport, reachable from outside the container.
+# FastMCP reads FASTMCP_HOST / FASTMCP_PORT; bind to all interfaces and honour a
+# platform-injected $PORT (Cloud Run, Render, Koyeb, Fly, …), defaulting to 8000.
+ENV FASTMCP_HOST=0.0.0.0
 EXPOSE 8000
-ENTRYPOINT ["mcpbin"]
-CMD ["--transport", "http", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "exec env FASTMCP_PORT=\"${PORT:-8000}\" mcpbin --transport http"]

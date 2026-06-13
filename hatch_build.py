@@ -27,9 +27,15 @@ class FrontendBuildHook(BuildHookInterface):
     PLUGIN_NAME = "mcpbin-frontend"
 
     def initialize(self, version: str, build_data: dict) -> None:
-        frontend_dir = os.path.join(self.root, "frontend")
-        if not os.path.isdir(frontend_dir):
-            return
-
-        force_include = build_data.setdefault("force_include", {})
-        force_include[frontend_dir] = "mcpbin/frontend"
+        # The frontend lives at the repo root (``frontend/``) for a direct build, but
+        # when the wheel is built *from the sdist* (``uv build``, ``pip install <sdist>``)
+        # the sdist hook has already relocated it to ``mcpbin/frontend/``. Check both
+        # locations so the frontend ships under ``mcpbin/frontend`` in every build path.
+        candidates = (
+            os.path.join(self.root, "frontend"),
+            os.path.join(self.root, "mcpbin", "frontend"),
+        )
+        for frontend_dir in candidates:
+            if os.path.isdir(frontend_dir):
+                build_data.setdefault("force_include", {})[frontend_dir] = "mcpbin/frontend"
+                return
