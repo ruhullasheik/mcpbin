@@ -91,9 +91,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T044 | `tools/inspect.py` — `inspect_session` | WP11 | | [D] |
 | T045 | requestCount increment via session store | WP11 | | [D] |
 | T046 | `tests/test_inspect.py` | WP11 | | [D] |
-| T047 | `resources.py` — text/markdown/blob + large paginated family (≥100) | WP12 | |
-| T048 | `mcpbin://dynamic/{id}` template + `mcpbin://missing` not-found | WP12 | |
-| T049 | `tests/test_resources.py` | WP12 | |
+| T047 | `resources.py` — text/markdown/blob + large paginated family (≥100) | WP12 | | [D] |
+| T048 | `mcpbin://dynamic/{id}` template + `mcpbin://missing` not-found | WP12 | | [D] |
+| T049 | `tests/test_resources.py` | WP12 | | [D] |
 | T050 | `prompts.py` — 5 prompt shapes | WP13 | |
 | T051 | `no_description` + `with_embedded_resource` specifics | WP13 | |
 | T052 | `tests/test_prompts.py` | WP13 | |
@@ -229,9 +229,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_resources.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP12-resources.md](tasks/WP12-resources.md) (~280 lines)
 
-- [ ] T047 `resources.py` static + large family (WP12)
-- [ ] T048 template + missing not-found (WP12)
-- [ ] T049 `tests/test_resources.py` (WP12)
+- [x] T047 `resources.py` static + large family (WP12)
+- [x] T048 template + missing not-found (WP12)
+- [x] T049 `tests/test_resources.py` (WP12)
 
 ### WP13 — Prompts
 **Goal**: 5 prompt shapes incl. multi-turn, embedded resource, no-description.
