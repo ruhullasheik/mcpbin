@@ -24,8 +24,8 @@ subtasks:
 - T019
 - T020
 - T021
-shell_pid: "2408"
-agent: "claude:opus:reviewer:reviewer"
+shell_pid: "16312"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -150,3 +150,4 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**. Worktree per lane
 - 2026-06-13T01:30:07Z – claude:opus:implementer:implementer – shell_pid=9460 – Ready for review
 - 2026-06-13T01:30:58Z – claude:opus:reviewer:reviewer – shell_pid=2408 – Started review via action command
 - 2026-06-13T01:45:12Z – claude:opus:reviewer:reviewer – shell_pid=2408 – Changes requested: HTTP MCP endpoint served at /mcp/mcp not /mcp when frontend present (double-mount in _build_http_app)
+- 2026-06-13T01:45:50Z – claude:opus:implementer:implementer – shell_pid=16312 – Started implementation via action command
