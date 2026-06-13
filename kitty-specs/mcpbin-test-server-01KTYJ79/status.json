@@ -1,7 +1,7 @@
 {
-  "event_count": 65,
-  "last_event_id": "01KTZW1E5AH34TW41GZ72SR32Z",
-  "materialized_at": "2026-06-13T06:52:18.986072+00:00",
+  "event_count": 67,
+  "last_event_id": "01KTZW1Z5FWP4KDTEWZ9ZX64PJ",
+  "materialized_at": "2026-06-13T06:52:36.399578+00:00",
   "mission_number": "",
   "mission_slug": "mcpbin-test-server-01KTYJ79",
   "mission_type": "software-dev",
@@ -12,9 +12,9 @@
     "claimed": 0,
     "done": 0,
     "for_review": 0,
-    "in_progress": 0,
+    "in_progress": 1,
     "in_review": 0,
-    "planned": 6
+    "planned": 5
   },
   "work_packages": {
     "WP01": {
@@ -95,11 +95,11 @@
       "last_transition_at": "2026-06-13T06:52:18.986072+00:00"
     },
     "WP12": {
-      "actor": "finalize-tasks",
+      "actor": "implement-command",
       "force_count": 1,
-      "lane": "planned",
-      "last_event_id": "01KTYKFEHE4MGD044548DGZEET",
-      "last_transition_at": "2026-06-12T19:03:26.510753+00:00"
+      "lane": "in_progress",
+      "last_event_id": "01KTZW1Z5FWP4KDTEWZ9ZX64PJ",
+      "last_transition_at": "2026-06-13T06:52:36.399578+00:00"
     },
     "WP13": {
       "actor": "finalize-tasks",
