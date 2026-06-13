@@ -6,5 +6,7 @@
   "mission_slug": "mcpbin-deployment-01KV19VJ",
   "mission_type": "software-dev",
   "slug": "mcpbin-deployment-01KV19VJ",
-  "target_branch": "main"
+  "target_branch": "main",
+  "vcs": "git",
+  "source_description": "Deploy mcpbin v0.1.0 as a free public hosted instance on a Hugging Face Docker Space (UI at /, MCP at /mcp), add a GitHub Actions release workflow that attaches correct artifacts on v* tags, verify the live endpoint, and document the live URL. Scope: HF Space only; GitHub-release artifacts only (no PyPI); deploy-ready + verified (manual HF Space creation by the maintainer)."
 }
