@@ -15,7 +15,8 @@ subtasks:
 - T004
 - T005
 - T006
-shell_pid: '16836'
+shell_pid: "16836"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-13'
   author: tasks
@@ -94,3 +95,7 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
   "endpoint live".
 - Keep retries bounded; don't hang. Reviewer: run it against localhost (pass) and a closed
   port (fail) to confirm both paths.
+
+## Activity Log
+
+- 2026-06-13T20:24:33Z – claude:opus:implementer:implementer – shell_pid=16836 – Assigned agent via action command
