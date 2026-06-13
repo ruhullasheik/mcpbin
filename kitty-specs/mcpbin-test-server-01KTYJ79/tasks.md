@@ -100,11 +100,11 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T053 | `frontend/index.html` — navbar + sidebar + detail panel | WP14 | | [D] |
 | T054 | `frontend/app.js` — fetch `/mcp`, follow cursors, group by area, error state | WP14 | | [D] |
 | T055 | `frontend/style.css` — no external deps, offline | WP14 | | [D] |
-| T056 | `tests/test_meta_contract.py` — every tool result has valid `_meta` | WP15 | |
-| T057 | `tests/test_pagination.py` — multipage + invalid cursor across all lists | WP15 | |
-| T058 | `tests/test_profiles.py` — all 4 profiles' capability gating | WP15 | |
-| T059 | `tests/test_integration.py` — catalog sizing + cross-area smoke | WP15 | |
-| T060 | `README.md` — test checklist (FR-017) + run/Docker docs | WP15 | |
+| T056 | `tests/test_meta_contract.py` — every tool result has valid `_meta` | WP15 | | [D] |
+| T057 | `tests/test_pagination.py` — multipage + invalid cursor across all lists | WP15 | | [D] |
+| T058 | `tests/test_profiles.py` — all 4 profiles' capability gating | WP15 | | [D] |
+| T059 | `tests/test_integration.py` — catalog sizing + cross-area smoke | WP15 | | [D] |
+| T060 | `README.md` — test checklist (FR-017) + run/Docker docs | WP15 | | [D] |
 
 ---
 
@@ -257,11 +257,11 @@ gate correctly; catalog sizing) plus the README test checklist.
 **Priority**: P2 (last). **Independent test**: `uv run pytest` (full suite green).
 **Depends on**: WP04–WP14. **Prompt**: [tasks/WP15-integration-docs.md](tasks/WP15-integration-docs.md) (~320 lines)
 
-- [ ] T056 `tests/test_meta_contract.py` (WP15)
-- [ ] T057 `tests/test_pagination.py` (WP15)
-- [ ] T058 `tests/test_profiles.py` (WP15)
-- [ ] T059 `tests/test_integration.py` (WP15)
-- [ ] T060 `README.md` test checklist + docs (WP15)
+- [x] T056 `tests/test_meta_contract.py` (WP15)
+- [x] T057 `tests/test_pagination.py` (WP15)
+- [x] T058 `tests/test_profiles.py` (WP15)
+- [x] T059 `tests/test_integration.py` (WP15)
+- [x] T060 `README.md` test checklist + docs (WP15)
 
 ---
 
