@@ -76,9 +76,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T029 | `tools/errors.py` — 7 error tools (codes + simulated parse) | WP06 | | [D] |
 | T030 | `error_tool_level` / `error_unknown_code` semantics | WP06 | | [D] |
 | T031 | `tests/test_errors.py` | WP06 | | [D] |
-| T032 | `tools/delays.py` — `delay` (clamp 30), fixed 1/5/30s | WP07 | |
-| T033 | `delay_cancel` — cancellation observation, `<1s`, fixed message | WP07 | |
-| T034 | `tests/test_delays.py` — timing + cancellation | WP07 | |
+| T032 | `tools/delays.py` — `delay` (clamp 30), fixed 1/5/30s | WP07 | | [D] |
+| T033 | `delay_cancel` — cancellation observation, `<1s`, fixed message | WP07 | | [D] |
+| T034 | `tests/test_delays.py` — timing + cancellation | WP07 | | [D] |
 | T035 | `tools/schema.py` — required/optional/enum/nested/array/no-args | WP08 | |
 | T036 | Schema validation behavior + `_meta` | WP08 | |
 | T037 | `tests/test_schema.py` | WP08 | |
@@ -184,9 +184,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_delays.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP07-delay-tools.md](tasks/WP07-delay-tools.md) (~250 lines)
 
-- [ ] T032 `tools/delays.py` delay+fixed (WP07)
-- [ ] T033 `delay_cancel` cancellation (WP07)
-- [ ] T034 `tests/test_delays.py` (WP07)
+- [x] T032 `tools/delays.py` delay+fixed (WP07)
+- [x] T033 `delay_cancel` cancellation (WP07)
+- [x] T034 `tests/test_delays.py` (WP07)
 
 ### WP08 — Schema validation tools
 **Goal**: 6 tools exercising required/optional/enum/nested/array/no-args schemas.
