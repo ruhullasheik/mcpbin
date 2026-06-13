@@ -88,9 +88,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T041 | `tools/sampling.py` — simple/system/max_tokens | WP10 | |
 | T042 | `sampling_unsupported` + graceful degradation | WP10 | |
 | T043 | `tests/test_sampling.py` (with sampling-capable mock client) | WP10 | |
-| T044 | `tools/inspect.py` — `inspect_session` | WP11 | |
-| T045 | requestCount increment via session store | WP11 | |
-| T046 | `tests/test_inspect.py` | WP11 | |
+| T044 | `tools/inspect.py` — `inspect_session` | WP11 | | [D] |
+| T045 | requestCount increment via session store | WP11 | | [D] |
+| T046 | `tests/test_inspect.py` | WP11 | | [D] |
 | T047 | `resources.py` — text/markdown/blob + large paginated family (≥100) | WP12 | |
 | T048 | `mcpbin://dynamic/{id}` template + `mcpbin://missing` not-found | WP12 | |
 | T049 | `tests/test_resources.py` | WP12 | |
@@ -220,9 +220,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_inspect.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP11-inspect-tool.md](tasks/WP11-inspect-tool.md) (~200 lines)
 
-- [ ] T044 `tools/inspect.py` (WP11)
-- [ ] T045 requestCount via session store (WP11)
-- [ ] T046 `tests/test_inspect.py` (WP11)
+- [x] T044 `tools/inspect.py` (WP11)
+- [x] T045 requestCount via session store (WP11)
+- [x] T046 `tests/test_inspect.py` (WP11)
 
 ### WP12 — Resources
 **Goal**: Every resource shape incl. URI template, missing, and a large paginated family.
