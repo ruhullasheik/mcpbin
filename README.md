@@ -9,6 +9,19 @@ server received and why the response looks the way it does.
 
 Built on [FastMCP](https://github.com/jlowin/fastmcp); targets MCP spec **2025-03-26**.
 
+## Live demo
+
+A hosted instance runs on a free Hugging Face Space:
+
+- **Web UI:** `https://<your-space>.hf.space/` _(placeholder — replace once the maintainer creates the Space)_
+- **MCP endpoint:** connect your MCP client to `https://<your-space>.hf.space/mcp` (Streamable HTTP).
+
+> The free Space **sleeps when idle** and wakes on the next request, so the first hit after a
+> while can take up to ~30 s. It serves the **`full`** profile.
+
+Want your own instance? See [`deploy/huggingface/SETUP.md`](deploy/huggingface/SETUP.md) for the
+one-time setup runbook.
+
 ## Quick start
 
 ```bash
