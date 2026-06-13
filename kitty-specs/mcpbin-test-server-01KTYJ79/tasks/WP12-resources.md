@@ -15,7 +15,8 @@ subtasks:
 - T047
 - T048
 - T049
-shell_pid: '18300'
+shell_pid: "18300"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -83,3 +84,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 - **verify-on-impl**: how the pinned FastMCP registers resource templates and signals a
   not-found read (exception vs error result). Reviewer: confirm the unknown-template vs
   `missing` distinction is observable and that the large family genuinely spans >1 list page.
+
+## Activity Log
+
+- 2026-06-13T06:52:38Z – claude:opus:implementer:implementer – shell_pid=18300 – Assigned agent via action command
