@@ -149,3 +149,4 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**. Worktree per lane
 - 2026-06-12T20:05:57Z – claude:opus:implementer:implementer – shell_pid=9460 – Assigned agent via action command
 - 2026-06-13T01:30:07Z – claude:opus:implementer:implementer – shell_pid=9460 – Ready for review
 - 2026-06-13T01:30:58Z – claude:opus:reviewer:reviewer – shell_pid=2408 – Started review via action command
+- 2026-06-13T01:45:12Z – claude:opus:reviewer:reviewer – shell_pid=2408 – Changes requested: HTTP MCP endpoint served at /mcp/mcp not /mcp when frontend present (double-mount in _build_http_app)
