@@ -424,7 +424,7 @@ def _build_parser() -> argparse.ArgumentParser:
     """Build the argparse CLI (dependency-free per C-003)."""
     parser = argparse.ArgumentParser(
         prog=SERVER_NAME,
-        description='mcpbin — a diagnostic MCP test server ("httpbin for MCP").',
+        description='mcpbin — a diagnostic test server for MCP clients (like httpbin for REST APIs).',
     )
     parser.add_argument(
         "--transport",

@@ -1,11 +1,19 @@
-# mcpbin — a diagnostic MCP test server
+<p align="center">
+  <img src="frontend/logo.svg" alt="mcpbin logo" width="96" height="96" />
+</p>
 
-**mcpbin** is the [httpbin](https://httpbin.org) of the Model Context Protocol: a
-deterministic, self-hostable MCP server for **MCP client developers**. Point your client
-at mcpbin to verify protocol compliance, validate error handling, and explore edge cases
-without building throwaway servers. Every tool, resource, and prompt has a documented,
-reproducible response, and every tool result carries a `_meta` block explaining what the
-server received and why the response looks the way it does.
+<h1 align="center">mcpbin</h1>
+
+<p align="center"><em>Like <a href="https://httpbin.org">httpbin</a> for REST APIs — a test server for exercising Model Context Protocol (MCP) clients.</em></p>
+
+---
+
+Just as **httpbin** gives REST/HTTP client developers a predictable server to test against,
+**mcpbin** gives **MCP client developers** a deterministic, self-hostable MCP server to test
+against. Point your client at mcpbin to verify protocol compliance, validate error handling,
+and explore edge cases without building throwaway servers. Every tool, resource, and prompt
+has a documented, reproducible response, and every tool result carries a `_meta` block
+explaining what the server received and why the response looks the way it does.
 
 Built on [FastMCP](https://github.com/jlowin/fastmcp); targets MCP spec **2025-03-26**.
 
@@ -129,8 +137,11 @@ only real feature endpoints, no synthetic padding.)
 
 ```bash
 docker build -t mcpbin:dev .
-docker run --rm -p 8000:8000 mcpbin:dev --transport http
+docker run --rm -p 8000:8000 mcpbin:dev   # serves the UI + /mcp at http://localhost:8000
 ```
+
+The image runs the Streamable HTTP transport bound to `0.0.0.0` and honors a platform-injected
+`$PORT` (Cloud Run, Render, …), defaulting to `8000`.
 
 ## Development
 

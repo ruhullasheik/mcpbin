@@ -7,13 +7,13 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: httpbin for the Model Context Protocol — test your MCP client
+short_description: Test server for MCP clients — like httpbin for REST
 ---
 
 # mcpbin — diagnostic MCP test server
 
-This Space hosts **mcpbin**, the [httpbin](https://httpbin.org) for the Model Context
-Protocol: a deterministic MCP server for **MCP client developers**. Point your client at
+This Space hosts **mcpbin** — like [httpbin](https://httpbin.org) for REST APIs, but a
+deterministic test server for **Model Context Protocol (MCP) clients**. Point your client at
 it to verify protocol compliance, validate error handling, and explore edge cases.
 
 - **Web UI:** the Space's main URL (`https://<owner>-mcpbin.hf.space/`)

@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcpbin"
-version = "0.1.1"
-description = "A diagnostic MCP test server (\"httpbin for MCP\") with predictable, documented responses for every protocol feature."
+version = "0.1.2"
+description = "A diagnostic test server for Model Context Protocol (MCP) clients — like httpbin for REST APIs — with predictable, documented responses for every protocol feature."
 readme = "README.md"
 requires-python = ">=3.12"
 license = { file = "LICENSE" }

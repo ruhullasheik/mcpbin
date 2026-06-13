@@ -241,7 +241,7 @@ function buildHero(counts) {
       <img class="hero-logo" src="logo.svg" width="64" height="64" alt="" />
       <div>
         <h1 class="hero-title">mcpbin</h1>
-        <p class="hero-tagline">The <a href="https://httpbin.org" target="_blank" rel="noopener">httpbin</a> for the Model Context Protocol.</p>
+        <p class="hero-tagline">Like <a href="https://httpbin.org" target="_blank" rel="noopener">httpbin</a> for REST APIs — a test server for Model Context Protocol (MCP) clients.</p>
       </div>
     </div>
     <p class="hero-lead">
