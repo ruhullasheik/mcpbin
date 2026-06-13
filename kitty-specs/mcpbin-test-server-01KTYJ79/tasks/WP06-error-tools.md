@@ -16,7 +16,8 @@ subtasks:
 - T029
 - T030
 - T031
-shell_pid: '18576'
+shell_pid: "18576"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -86,3 +87,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 - How a protocol error appears to the in-memory client (exception vs error result) depends on
   FastMCP (R4) — reviewer: confirm the test asserts the actual surfaced shape, and that the
   `_meta` requirement (FR-013) holds even on protocol errors per spec rule.
+
+## Activity Log
+
+- 2026-06-13T01:52:55Z – claude:opus:implementer:implementer – shell_pid=18576 – Assigned agent via action command
