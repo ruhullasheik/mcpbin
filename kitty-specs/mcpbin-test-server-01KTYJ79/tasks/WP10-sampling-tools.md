@@ -92,3 +92,4 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 
 - 2026-06-13T07:00:28Z – claude:opus:implementer:implementer – shell_pid=18772 – Assigned agent via action command
 - 2026-06-13T07:02:48Z – claude:opus:implementer:implementer – shell_pid=18772 – 4 sampling tools; round-trip + systemPrompt/maxTokens captured; graceful degrade; 4 tests pass
+- 2026-06-13T07:02:54Z – claude:opus:implementer:implementer – shell_pid=18772 – Orchestrator review: createMessage round-trip returns reply; systemPrompt + maxTokens=42 verified in captured request; sampling_unsupported returns graceful isError without a handler; 4 tests pass
