@@ -17,7 +17,8 @@ subtasks:
 - T026
 - T027
 - T028
-shell_pid: '2776'
+shell_pid: "2776"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -87,3 +88,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 - The `return_empty` vs mandatory-`_meta` tension is the one spec ambiguity here — reviewer:
   confirm the implemented choice is internally consistent and documented.
 - Keep the PNG tiny but valid; verify it's committed as binary (not corrupted by text mode).
+
+## Activity Log
+
+- 2026-06-13T01:52:47Z – claude:opus:implementer:implementer – shell_pid=2776 – Assigned agent via action command
