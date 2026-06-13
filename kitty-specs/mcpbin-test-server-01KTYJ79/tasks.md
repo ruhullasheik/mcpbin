@@ -97,9 +97,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T050 | `prompts.py` — 5 prompt shapes | WP13 | | [D] |
 | T051 | `no_description` + `with_embedded_resource` specifics | WP13 | | [D] |
 | T052 | `tests/test_prompts.py` | WP13 | | [D] |
-| T053 | `frontend/index.html` — navbar + sidebar + detail panel | WP14 | |
-| T054 | `frontend/app.js` — fetch `/mcp`, follow cursors, group by area, error state | WP14 | |
-| T055 | `frontend/style.css` — no external deps, offline | WP14 | |
+| T053 | `frontend/index.html` — navbar + sidebar + detail panel | WP14 | | [D] |
+| T054 | `frontend/app.js` — fetch `/mcp`, follow cursors, group by area, error state | WP14 | | [D] |
+| T055 | `frontend/style.css` — no external deps, offline | WP14 | | [D] |
 | T056 | `tests/test_meta_contract.py` — every tool result has valid `_meta` | WP15 | |
 | T057 | `tests/test_pagination.py` — multipage + invalid cursor across all lists | WP15 | |
 | T058 | `tests/test_profiles.py` — all 4 profiles' capability gating | WP15 | |
@@ -247,9 +247,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P2. **Independent test**: manual quickstart (load `/`, kill `/mcp` → error state).
 **Depends on**: WP03. **Prompt**: [tasks/WP14-frontend.md](tasks/WP14-frontend.md) (~300 lines)
 
-- [ ] T053 `frontend/index.html` (WP14)
-- [ ] T054 `frontend/app.js` (WP14)
-- [ ] T055 `frontend/style.css` (WP14)
+- [x] T053 `frontend/index.html` (WP14)
+- [x] T054 `frontend/app.js` (WP14)
+- [x] T055 `frontend/style.css` (WP14)
 
 ### WP15 — Integration, validation & docs
 **Goal**: Cross-cutting validation (every result has `_meta`; pagination multipage; all profiles
