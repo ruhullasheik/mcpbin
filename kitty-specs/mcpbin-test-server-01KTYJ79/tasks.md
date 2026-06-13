@@ -58,14 +58,14 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T011 | `session.py` — per-session store (requestCount, caps, transport) | WP02 | [D] |
 | T012 | `registry.py` + `tools/__init__.py` — auto-discovery `register_all` | WP02 | | [D] |
 | T013 | `tests/test_core.py` — codec/profiles/meta/session units | WP02 | | [D] |
-| T014 | `server.py` — build FastMCP app, register via registry+profile | WP03 | |
-| T015 | CLI: `--transport {stdio,sse,http}`, `--profile {...}`, `main()` | WP03 | |
-| T016 | Transport run wiring (`app.run` per transport) | WP03 | |
-| T017 | Serve static `frontend/` at `/`, MCP at `/mcp` (HTTP transports) | WP03 | |
-| T018 | Capability gating: omitted caps' list methods → `-32601`; `minimal` no `listChanged` | WP03 | |
-| T019 | Pagination wiring into list handlers (page 10, opaque cursor, absent final `nextCursor`) | WP03 | |
-| T020 | `tests/conftest.py` — in-memory client fixtures per profile | WP03 | |
-| T021 | `tests/test_server.py` — transport/profile/pagination smoke | WP03 | |
+| T014 | `server.py` — build FastMCP app, register via registry+profile | WP03 | | [D] |
+| T015 | CLI: `--transport {stdio,sse,http}`, `--profile {...}`, `main()` | WP03 | | [D] |
+| T016 | Transport run wiring (`app.run` per transport) | WP03 | | [D] |
+| T017 | Serve static `frontend/` at `/`, MCP at `/mcp` (HTTP transports) | WP03 | | [D] |
+| T018 | Capability gating: omitted caps' list methods → `-32601`; `minimal` no `listChanged` | WP03 | | [D] |
+| T019 | Pagination wiring into list handlers (page 10, opaque cursor, absent final `nextCursor`) | WP03 | | [D] |
+| T020 | `tests/conftest.py` — in-memory client fixtures per profile | WP03 | | [D] |
+| T021 | `tests/test_server.py` — transport/profile/pagination smoke | WP03 | | [D] |
 | T022 | `tools/echo.py` — 7 echo tools + `_meta` | WP04 | |
 | T023 | Echo input schemas (string/number/boolean/object/array/all_types) | WP04 | |
 | T024 | `tests/test_echo.py` — round-trip + `_meta` assertions | WP04 | |
@@ -142,14 +142,14 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P0. **Independent test**: `uv run pytest tests/test_server.py`; `uv run mcpbin --help`.
 **Depends on**: WP02. **Prompt**: [tasks/WP03-server-transports.md](tasks/WP03-server-transports.md) (~450 lines)
 
-- [ ] T014 `server.py` app + registry/profile registration (WP03)
-- [ ] T015 CLI flags + `main()` (WP03)
-- [ ] T016 transport run wiring (WP03)
-- [ ] T017 static `/` + `/mcp` mounting (WP03)
-- [ ] T018 capability gating → `-32601` (WP03)
-- [ ] T019 pagination wiring (WP03)
-- [ ] T020 `tests/conftest.py` fixtures (WP03)
-- [ ] T021 `tests/test_server.py` (WP03)
+- [x] T014 `server.py` app + registry/profile registration (WP03)
+- [x] T015 CLI flags + `main()` (WP03)
+- [x] T016 transport run wiring (WP03)
+- [x] T017 static `/` + `/mcp` mounting (WP03)
+- [x] T018 capability gating → `-32601` (WP03)
+- [x] T019 pagination wiring (WP03)
+- [x] T020 `tests/conftest.py` fixtures (WP03)
+- [x] T021 `tests/test_server.py` (WP03)
 
 ### WP04 — Echo tools
 **Goal**: 7 echo tools returning inputs unchanged, each with `_meta`.
