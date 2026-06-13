@@ -15,7 +15,8 @@ subtasks:
 - T050
 - T051
 - T052
-shell_pid: '5472'
+shell_pid: "5472"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -83,3 +84,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 ## Risks & reviewer guidance
 - **verify-on-impl**: whether FastMCP can register a prompt with a truly absent description and
   an embedded-resource message. Reviewer: confirm `no_description` is *absent*, not blank.
+
+## Activity Log
+
+- 2026-06-13T06:55:06Z – claude:opus:implementer:implementer – shell_pid=5472 – Assigned agent via action command
