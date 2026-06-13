@@ -19,7 +19,8 @@ subtasks:
 - T001
 - T002
 - T003
-shell_pid: '22516'
+shell_pid: "22516"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-13'
   author: tasks
@@ -105,3 +106,7 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
 - Pin action versions. Keep `GITHUB_TOKEN` usage; never add a PAT.
 - Can't fully run Actions locally; review by inspection + (optionally) `act`/a throwaway tag
   on a fork. Note the verification method in the PR.
+
+## Activity Log
+
+- 2026-06-13T20:24:16Z – claude:opus:implementer:implementer – shell_pid=22516 – Assigned agent via action command
