@@ -9,11 +9,15 @@ requirement_refs:
 planning_base_branch: devs/ruhulla
 merge_target_branch: devs/ruhulla
 branch_strategy: Planning artifacts for this feature were generated on devs/ruhulla. During /spec-kitty.implement this WP may branch from a dependency-specific base, but completed changes must merge back into devs/ruhulla unless the human explicitly redirects the landing branch.
+base_branch: kitty/mission-mcpbin-test-server-01KTYJ79
+base_commit: fd17b7d7cdf627547a3896eb7041016a97e887f9
+created_at: '2026-06-13T01:52:44.722160+00:00'
 subtasks:
 - T025
 - T026
 - T027
 - T028
+shell_pid: '2776'
 history:
 - date: '2026-06-12'
   author: tasks
