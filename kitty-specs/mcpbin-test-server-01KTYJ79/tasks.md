@@ -66,9 +66,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T019 | Pagination wiring into list handlers (page 10, opaque cursor, absent final `nextCursor`) | WP03 | | [D] |
 | T020 | `tests/conftest.py` — in-memory client fixtures per profile | WP03 | | [D] |
 | T021 | `tests/test_server.py` — transport/profile/pagination smoke | WP03 | | [D] |
-| T022 | `tools/echo.py` — 7 echo tools + `_meta` | WP04 | |
-| T023 | Echo input schemas (string/number/boolean/object/array/all_types) | WP04 | |
-| T024 | `tests/test_echo.py` — round-trip + `_meta` assertions | WP04 | |
+| T022 | `tools/echo.py` — 7 echo tools + `_meta` | WP04 | | [D] |
+| T023 | Echo input schemas (string/number/boolean/object/array/all_types) | WP04 | | [D] |
+| T024 | `tests/test_echo.py` — round-trip + `_meta` assertions | WP04 | | [D] |
 | T025 | `tools/response_types.py` — 6 content-type tools | WP05 | |
 | T026 | `assets/test.png` — committed tiny deterministic PNG | WP05 | |
 | T027 | `return_empty` / `_meta` reconciliation (research R5) | WP05 | |
@@ -156,9 +156,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_echo.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP04-echo-tools.md](tasks/WP04-echo-tools.md) (~220 lines)
 
-- [ ] T022 `tools/echo.py` 7 tools (WP04)
-- [ ] T023 echo input schemas (WP04)
-- [ ] T024 `tests/test_echo.py` (WP04)
+- [x] T022 `tools/echo.py` 7 tools (WP04)
+- [x] T023 echo input schemas (WP04)
+- [x] T024 `tests/test_echo.py` (WP04)
 
 ### WP05 — Response-type tools
 **Goal**: 6 tools covering every MCP content type + committed PNG asset.
