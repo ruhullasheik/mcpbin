@@ -118,3 +118,4 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
 
 - 2026-06-13T20:24:43Z – claude:opus:implementer:implementer – shell_pid=20072 – Assigned agent via action command
 - 2026-06-13T20:28:14Z – claude:opus:implementer:implementer – shell_pid=20072 – HF Space assets validated; README live-demo added
+- 2026-06-13T20:29:33Z – claude:opus:implementer:implementer – shell_pid=20072 – Review: only README+SETUP changed (no root Dockerfile regression); frontend resolves True; app_port==7860 bind; clear placeholder + cold-start/profile note
