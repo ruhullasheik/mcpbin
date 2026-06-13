@@ -33,9 +33,9 @@ work package — it's the post-merge runbook in `quickstart.md` (C-005).
 | T004 | `smoke_check.py`: stdlib CLI scaffold (base-url arg, timeout, exit codes) | WP02 | [P] |
 | T005 | Check 1 `GET /` 200 + app shell; Check 2 `POST /mcp` initialize reaches MCP; cold-start retries | WP02 | |
 | T006 | Local verification run against `uv run mcpbin --transport http` | WP02 | |
-| T007 | Validate/refine HF Space `Dockerfile` (port 7860, FASTMCP env, pinned tag); confirm frontend bundles | WP03 | [P] |
-| T008 | HF Space `README.md` front-matter (`app_port: 7860`) + align `SETUP.md` runbook | WP03 | |
-| T009 | Root `README.md` "Live demo" section: URL placeholder + connect line + cold-start/profile note (FR-009) | WP03 | |
+| T007 | Validate/refine HF Space `Dockerfile` (port 7860, FASTMCP env, pinned tag); confirm frontend bundles | WP03 | [D] |
+| T008 | HF Space `README.md` front-matter (`app_port: 7860`) + align `SETUP.md` runbook | WP03 | | [D] |
+| T009 | Root `README.md` "Live demo" section: URL placeholder + connect line + cold-start/profile note (FR-009) | WP03 | | [D] |
 
 ---
 
@@ -71,9 +71,9 @@ documented equiv) yields a container that serves `/` (UI) and `/mcp` on port 786
 a "Live demo" section.
 **Depends on**: none. **Prompt**: [tasks/WP03-hf-space-docs.md](tasks/WP03-hf-space-docs.md) (~200 lines)
 
-- [ ] T007 validate/refine Space Dockerfile (WP03)
-- [ ] T008 Space README front-matter + SETUP alignment (WP03)
-- [ ] T009 root README "Live demo" section + cold-start/profile note (WP03)
+- [x] T007 validate/refine Space Dockerfile (WP03)
+- [x] T008 Space README front-matter + SETUP alignment (WP03)
+- [x] T009 root README "Live demo" section + cold-start/profile note (WP03)
 
 ---
 
