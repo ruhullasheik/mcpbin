@@ -1,0 +1,25 @@
+# VCS / worktrees
+.git
+.gitignore
+.gitattributes
+.worktrees
+
+# Virtual envs / caches
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Spec Kitty mission artifacts (not needed in the image)
+kitty-specs
+.kittify
+PRD.md
+
+# Editor / OS noise
+.idea
+.vscode
+.DS_Store
+.claudeignore

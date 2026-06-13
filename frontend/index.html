@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mcpbin — MCP test server</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">mcpbin</div>
+    <div class="badge" id="protocol-badge">MCP 2025-03-26</div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <section class="nav-section">
+        <button class="nav-header" data-target="tools-list" aria-expanded="true">Tools</button>
+        <ul class="nav-list" id="tools-list"></ul>
+      </section>
+      <section class="nav-section">
+        <button class="nav-header" data-target="resources-list" aria-expanded="true">Resources</button>
+        <ul class="nav-list" id="resources-list"></ul>
+      </section>
+      <section class="nav-section">
+        <button class="nav-header" data-target="prompts-list" aria-expanded="true">Prompts</button>
+        <ul class="nav-list" id="prompts-list"></ul>
+      </section>
+    </nav>
+
+    <main class="content" id="content">
+      <p class="hint">Loading the mcpbin catalog from <code>/mcp</code>&hellip;</p>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
