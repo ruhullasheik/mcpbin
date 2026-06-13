@@ -30,9 +30,9 @@ work package — it's the post-merge runbook in `quickstart.md` (C-005).
 | T001 | Release workflow skeleton: `v*` tag trigger, `contents: write`, checkout, uv, Python 3.12 | WP01 | [P] | [D] |
 | T002 | Test gate (`uv run pytest`) → `uv build` → assert wheel bundles `mcpbin/frontend/` | WP01 | | [D] |
 | T003 | Publish: idempotent `gh release` create-or-upload of `dist/*` with `GITHUB_TOKEN` | WP01 | | [D] |
-| T004 | `smoke_check.py`: stdlib CLI scaffold (base-url arg, timeout, exit codes) | WP02 | [P] |
-| T005 | Check 1 `GET /` 200 + app shell; Check 2 `POST /mcp` initialize reaches MCP; cold-start retries | WP02 | |
-| T006 | Local verification run against `uv run mcpbin --transport http` | WP02 | |
+| T004 | `smoke_check.py`: stdlib CLI scaffold (base-url arg, timeout, exit codes) | WP02 | [D] |
+| T005 | Check 1 `GET /` 200 + app shell; Check 2 `POST /mcp` initialize reaches MCP; cold-start retries | WP02 | | [D] |
+| T006 | Local verification run against `uv run mcpbin --transport http` | WP02 | | [D] |
 | T007 | Validate/refine HF Space `Dockerfile` (port 7860, FASTMCP env, pinned tag); confirm frontend bundles | WP03 | [D] |
 | T008 | HF Space `README.md` front-matter (`app_port: 7860`) + align `SETUP.md` runbook | WP03 | | [D] |
 | T009 | Root `README.md` "Live demo" section: URL placeholder + connect line + cold-start/profile note (FR-009) | WP03 | | [D] |
@@ -59,9 +59,9 @@ tolerant of cold start; usable locally and post-deploy.
 passes against a locally running server; exits non-zero on a dead URL.
 **Depends on**: none. **Prompt**: [tasks/WP02-smoke-check.md](tasks/WP02-smoke-check.md) (~170 lines)
 
-- [ ] T004 CLI scaffold + exit codes (WP02)
-- [ ] T005 the two checks + cold-start retries (WP02)
-- [ ] T006 local verification run (WP02)
+- [x] T004 CLI scaffold + exit codes (WP02)
+- [x] T005 the two checks + cold-start retries (WP02)
+- [x] T006 local verification run (WP02)
 
 ### WP03 — Hugging Face Space + live-demo docs
 **Goal**: Finalize the deployable HF Docker Space assets and advertise the live demo in the
