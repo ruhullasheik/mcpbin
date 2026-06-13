@@ -117,3 +117,4 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
 ## Activity Log
 
 - 2026-06-13T20:24:43Z – claude:opus:implementer:implementer – shell_pid=20072 – Assigned agent via action command
+- 2026-06-13T20:28:14Z – claude:opus:implementer:implementer – shell_pid=20072 – HF Space assets validated; README live-demo added
