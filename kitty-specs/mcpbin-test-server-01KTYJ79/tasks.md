@@ -73,9 +73,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T026 | `assets/test.png` — committed tiny deterministic PNG | WP05 | | [D] |
 | T027 | `return_empty` / `_meta` reconciliation (research R5) | WP05 | | [D] |
 | T028 | `tests/test_response_types.py` | WP05 | | [D] |
-| T029 | `tools/errors.py` — 7 error tools (codes + simulated parse) | WP06 | |
-| T030 | `error_tool_level` / `error_unknown_code` semantics | WP06 | |
-| T031 | `tests/test_errors.py` | WP06 | |
+| T029 | `tools/errors.py` — 7 error tools (codes + simulated parse) | WP06 | | [D] |
+| T030 | `error_tool_level` / `error_unknown_code` semantics | WP06 | | [D] |
+| T031 | `tests/test_errors.py` | WP06 | | [D] |
 | T032 | `tools/delays.py` — `delay` (clamp 30), fixed 1/5/30s | WP07 | |
 | T033 | `delay_cancel` — cancellation observation, `<1s`, fixed message | WP07 | |
 | T034 | `tests/test_delays.py` — timing + cancellation | WP07 | |
@@ -175,9 +175,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_errors.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP06-error-tools.md](tasks/WP06-error-tools.md) (~230 lines)
 
-- [ ] T029 `tools/errors.py` 7 tools (WP06)
-- [ ] T030 tool-level / unknown-code semantics (WP06)
-- [ ] T031 `tests/test_errors.py` (WP06)
+- [x] T029 `tools/errors.py` 7 tools (WP06)
+- [x] T030 tool-level / unknown-code semantics (WP06)
+- [x] T031 `tests/test_errors.py` (WP06)
 
 ### WP07 — Delay tools
 **Goal**: Timed tools + cancellation honoring `notifications/cancelled`.
