@@ -16,7 +16,8 @@ subtasks:
 - T038
 - T039
 - T040
-shell_pid: '2820'
+shell_pid: "2820"
+agent: "claude:opus:implementer:implementer"
 history:
 - date: '2026-06-12'
   author: tasks
@@ -81,3 +82,7 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 - **verify-on-impl (R7)**: exact Context method names for progress/log/notifications and the
   client-side handler API. If the in-memory client can't capture a given notification, assert
   what is observable and document the gap.
+
+## Activity Log
+
+- 2026-06-13T06:57:48Z – claude:opus:implementer:implementer – shell_pid=2820 – Assigned agent via action command
