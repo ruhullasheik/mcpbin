@@ -79,9 +79,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T032 | `tools/delays.py` — `delay` (clamp 30), fixed 1/5/30s | WP07 | | [D] |
 | T033 | `delay_cancel` — cancellation observation, `<1s`, fixed message | WP07 | | [D] |
 | T034 | `tests/test_delays.py` — timing + cancellation | WP07 | | [D] |
-| T035 | `tools/schema.py` — required/optional/enum/nested/array/no-args | WP08 | |
-| T036 | Schema validation behavior + `_meta` | WP08 | |
-| T037 | `tests/test_schema.py` | WP08 | |
+| T035 | `tools/schema.py` — required/optional/enum/nested/array/no-args | WP08 | | [D] |
+| T036 | Schema validation behavior + `_meta` | WP08 | | [D] |
+| T037 | `tests/test_schema.py` | WP08 | | [D] |
 | T038 | `tools/notifications.py` — 4 list/update notifies | WP09 | |
 | T039 | `notify_progress` (≥3) + `notify_log` (all levels) | WP09 | |
 | T040 | `tests/test_notifications.py` | WP09 | |
@@ -193,9 +193,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_schema.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP08-schema-tools.md](tasks/WP08-schema-tools.md) (~230 lines)
 
-- [ ] T035 `tools/schema.py` 6 tools (WP08)
-- [ ] T036 validation behavior + `_meta` (WP08)
-- [ ] T037 `tests/test_schema.py` (WP08)
+- [x] T035 `tools/schema.py` 6 tools (WP08)
+- [x] T036 validation behavior + `_meta` (WP08)
+- [x] T037 `tests/test_schema.py` (WP08)
 
 ### WP09 — Notification tools
 **Goal**: Server→client notifications incl. progress sequences and log levels.
