@@ -94,3 +94,4 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 ## Activity Log
 
 - 2026-06-13T07:03:21Z – claude:opus:implementer:implementer – shell_pid=16336 – Assigned agent via action command
+- 2026-06-13T07:05:46Z – claude:opus:implementer:implementer – shell_pid=16336 – Static UI; server serves / + app.js + style.css; POST /mcp reaches MCP (verified via ASGI probe)
