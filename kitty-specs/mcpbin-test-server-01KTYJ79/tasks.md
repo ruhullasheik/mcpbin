@@ -85,9 +85,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T038 | `tools/notifications.py` — 4 list/update notifies | WP09 | | [D] |
 | T039 | `notify_progress` (≥3) + `notify_log` (all levels) | WP09 | | [D] |
 | T040 | `tests/test_notifications.py` | WP09 | | [D] |
-| T041 | `tools/sampling.py` — simple/system/max_tokens | WP10 | |
-| T042 | `sampling_unsupported` + graceful degradation | WP10 | |
-| T043 | `tests/test_sampling.py` (with sampling-capable mock client) | WP10 | |
+| T041 | `tools/sampling.py` — simple/system/max_tokens | WP10 | | [D] |
+| T042 | `sampling_unsupported` + graceful degradation | WP10 | | [D] |
+| T043 | `tests/test_sampling.py` (with sampling-capable mock client) | WP10 | | [D] |
 | T044 | `tools/inspect.py` — `inspect_session` | WP11 | | [D] |
 | T045 | requestCount increment via session store | WP11 | | [D] |
 | T046 | `tests/test_inspect.py` | WP11 | | [D] |
@@ -211,9 +211,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_sampling.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP10-sampling-tools.md](tasks/WP10-sampling-tools.md) (~250 lines)
 
-- [ ] T041 `tools/sampling.py` simple/system/max_tokens (WP10)
-- [ ] T042 `sampling_unsupported` + degradation (WP10)
-- [ ] T043 `tests/test_sampling.py` (WP10)
+- [x] T041 `tools/sampling.py` simple/system/max_tokens (WP10)
+- [x] T042 `sampling_unsupported` + degradation (WP10)
+- [x] T043 `tests/test_sampling.py` (WP10)
 
 ### WP11 — Protocol inspection tool
 **Goal**: `inspect_session` exposing session metadata + incrementing requestCount.
