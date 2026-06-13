@@ -91,3 +91,4 @@ Planning/base **devs/ruhulla**; merge target **devs/ruhulla**; worktree per lane
 ## Activity Log
 
 - 2026-06-13T07:00:28Z – claude:opus:implementer:implementer – shell_pid=18772 – Assigned agent via action command
+- 2026-06-13T07:02:48Z – claude:opus:implementer:implementer – shell_pid=18772 – 4 sampling tools; round-trip + systemPrompt/maxTokens captured; graceful degrade; 4 tests pass
