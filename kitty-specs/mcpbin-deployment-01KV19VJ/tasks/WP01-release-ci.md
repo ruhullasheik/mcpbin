@@ -110,3 +110,4 @@ Planning/base **main**; merge target **main**; worktree per lane from `lanes.jso
 ## Activity Log
 
 - 2026-06-13T20:24:16Z – claude:opus:implementer:implementer – shell_pid=22516 – Assigned agent via action command
+- 2026-06-13T20:25:49Z – claude:opus:implementer:implementer – shell_pid=22516 – Release workflow added; YAML validated
