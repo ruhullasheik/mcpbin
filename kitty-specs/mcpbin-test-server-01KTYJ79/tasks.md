@@ -94,9 +94,9 @@ MVP = WP01 → WP02 → WP03 + WP04 (one working echo tool over stdio proves the
 | T047 | `resources.py` — text/markdown/blob + large paginated family (≥100) | WP12 | | [D] |
 | T048 | `mcpbin://dynamic/{id}` template + `mcpbin://missing` not-found | WP12 | | [D] |
 | T049 | `tests/test_resources.py` | WP12 | | [D] |
-| T050 | `prompts.py` — 5 prompt shapes | WP13 | |
-| T051 | `no_description` + `with_embedded_resource` specifics | WP13 | |
-| T052 | `tests/test_prompts.py` | WP13 | |
+| T050 | `prompts.py` — 5 prompt shapes | WP13 | | [D] |
+| T051 | `no_description` + `with_embedded_resource` specifics | WP13 | | [D] |
+| T052 | `tests/test_prompts.py` | WP13 | | [D] |
 | T053 | `frontend/index.html` — navbar + sidebar + detail panel | WP14 | |
 | T054 | `frontend/app.js` — fetch `/mcp`, follow cursors, group by area, error state | WP14 | |
 | T055 | `frontend/style.css` — no external deps, offline | WP14 | |
@@ -238,9 +238,9 @@ capability advertisement/gating, and pagination of list methods. Provides shared
 **Priority**: P1. **Independent test**: `uv run pytest tests/test_prompts.py`.
 **Depends on**: WP03. **Prompt**: [tasks/WP13-prompts.md](tasks/WP13-prompts.md) (~230 lines)
 
-- [ ] T050 `prompts.py` 5 shapes (WP13)
-- [ ] T051 no_description + embedded_resource (WP13)
-- [ ] T052 `tests/test_prompts.py` (WP13)
+- [x] T050 `prompts.py` 5 shapes (WP13)
+- [x] T051 no_description + embedded_resource (WP13)
+- [x] T052 `tests/test_prompts.py` (WP13)
 
 ### WP14 — Reference frontend
 **Goal**: Static, framework-free UI fetching the live catalog from `/mcp`, offline-capable.
