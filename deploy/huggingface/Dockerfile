@@ -12,9 +12,10 @@ ENV PIP_NO_CACHE_DIR=1 \
     FASTMCP_HOST=0.0.0.0 \
     FASTMCP_PORT=7860
 
-# Pin to a release tag for reproducibility. Bump this to redeploy a newer version.
+# Pin to a release tag (manual deploys) or a commit SHA (CI continuous deploy).
+# The generic /archive/<ref>.tar.gz form accepts a tag, branch, or full commit SHA.
 ARG MCPBIN_REF=v0.1.3
-RUN pip install "https://github.com/ruhullasheik/mcpbin/archive/refs/tags/${MCPBIN_REF}.tar.gz"
+RUN pip install "https://github.com/ruhullasheik/mcpbin/archive/${MCPBIN_REF}.tar.gz"
 
 EXPOSE 7860
 CMD ["mcpbin", "--transport", "http"]

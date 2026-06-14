@@ -49,6 +49,26 @@ Streamable HTTP endpoint: `https://<your-username>-mcpbin.hf.space/mcp`
 The `.hf.space` subdomain serves the container **at root**, so the UI's relative `/mcp`
 fetch resolves to that same endpoint — no path prefix or rewrite is needed.
 
+## Automated deploys (CI → HF)
+
+`.github/workflows/deploy-hf.yml` continuously deploys the live demo: on every push to
+`main` it runs the test gate, then pins the Space `Dockerfile` to the pushed commit SHA and
+pushes `README.md` + `Dockerfile` to the Space repo, which triggers an HF rebuild. **CI is
+the source of truth for the Space repo — don't hand-edit it, your changes will be
+overwritten on the next deploy.**
+
+One-time setup:
+
+1. Create a Hugging Face **write** token: <https://huggingface.co/settings/tokens>.
+2. Add it as a GitHub Actions secret named `HF_TOKEN`:
+   ```bash
+   gh secret set HF_TOKEN          # paste the token when prompted
+   ```
+   (or repo Settings → Secrets and variables → Actions → New repository secret).
+3. Trigger the first automated deploy: `gh workflow run deploy-hf.yml` (or just push to `main`).
+
+Without `HF_TOKEN` the workflow runs the test gate and skips the deploy step gracefully.
+
 ## Notes
 
 - **Port:** HF routes to the port set by `app_port: 7860` in `README.md`; the container
