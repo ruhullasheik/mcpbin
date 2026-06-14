@@ -1,12 +1,13 @@
 name: deploy-hf
 
-# Continuous deploy of the live demo: every push to main rebuilds the Hugging Face
-# Space pinned to that exact commit SHA. Auth uses the HF_TOKEN repo secret (a
-# Hugging Face *write* token). Without that secret the job runs the gate and then
-# skips the deploy gracefully (so forks / unconfigured repos don't fail).
+# Deploy the live demo on each release: pushing a v* tag rebuilds the Hugging Face
+# Space pinned to that tag. Contributions land on main (CI-tested) without changing
+# the public demo; the demo only moves when the maintainer cuts a release.
+# Auth uses the HF_TOKEN repo secret (a Hugging Face *write* token). Without that
+# secret the job runs the gate and then skips the deploy gracefully.
 on:
   push:
-    branches: [main]
+    tags: ['v*']
   workflow_dispatch:
 
 permissions:
@@ -47,12 +48,15 @@ jobs:
             exit 0
           fi
           set -euo pipefail
+          # Pin the Space to the released tag (GITHUB_REF_NAME); a manual dispatch on a
+          # branch falls back to that ref. The generic archive URL accepts tag or SHA.
+          ref="${GITHUB_REF_NAME}"
           remote="https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}"
           git clone --depth 1 "${remote}" space 2>&1 | sed "s/${HF_TOKEN}/***/g"
 
-          # README carries the HF Space front-matter; Dockerfile pinned to this commit SHA.
+          # README carries the HF Space front-matter; Dockerfile pinned to the released ref.
           cp deploy/huggingface/README.md space/README.md
-          sed "s|^ARG MCPBIN_REF=.*|ARG MCPBIN_REF=${GITHUB_SHA}|" deploy/huggingface/Dockerfile > space/Dockerfile
+          sed "s|^ARG MCPBIN_REF=.*|ARG MCPBIN_REF=${ref}|" deploy/huggingface/Dockerfile > space/Dockerfile
 
           cd space
           git config user.name "github-actions[bot]"
@@ -62,6 +66,6 @@ jobs:
             echo "No Space changes to deploy."
             exit 0
           fi
-          git commit -m "Deploy mcpbin @ ${GITHUB_SHA:0:7}"
+          git commit -m "Deploy mcpbin ${ref}"
           git push origin HEAD:main 2>&1 | sed "s/${HF_TOKEN}/***/g"
-          echo "Deployed ${GITHUB_SHA:0:7} to https://${HF_USER}-mcpbin.hf.space/"
+          echo "Deployed ${ref} to https://${HF_USER}-mcpbin.hf.space/"

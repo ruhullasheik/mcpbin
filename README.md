@@ -152,3 +152,10 @@ uv run pytest        # full test suite (one module per feature area + cross-cutt
 The package is structured as a small FastMCP app (`src/mcpbin/`) with one module per
 feature area under `tools/`, auto-discovered by `registry.py`; resources and prompts live
 in `resources.py` / `prompts.py`; the static UI is in `frontend/`.
+
+## Contributing
+
+Contributions are welcome — bug fixes, new diagnostic tools/resources/prompts, docs, and UI
+improvements. See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup and PR flow, and the
+[Code of Conduct](CODE_OF_CONDUCT.md). CI runs the test suite on every pull request. To report
+a security issue, see [SECURITY.md](SECURITY.md).
