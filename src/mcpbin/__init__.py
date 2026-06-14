@@ -8,6 +8,6 @@ packages; this module intentionally exposes only the version string so that
 ``import mcpbin`` succeeds before those modules exist.
 """
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 __all__ = ["__version__"]

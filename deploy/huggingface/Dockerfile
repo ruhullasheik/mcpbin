@@ -13,7 +13,7 @@ ENV PIP_NO_CACHE_DIR=1 \
     FASTMCP_PORT=7860
 
 # Pin to a release tag for reproducibility. Bump this to redeploy a newer version.
-ARG MCPBIN_REF=v0.1.0
+ARG MCPBIN_REF=v0.1.3
 RUN pip install "https://github.com/ruhullasheik/mcpbin/archive/refs/tags/${MCPBIN_REF}.tar.gz"
 
 EXPOSE 7860
