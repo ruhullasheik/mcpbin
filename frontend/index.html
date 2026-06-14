@@ -8,55 +8,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar" id="top">
-    <a class="brand" href="#top">
-      <img class="logo" src="logo.svg" width="30" height="30" alt="" />
-      <span class="brand-name">mcpbin</span>
-      <span class="brand-sub">MCP test server</span>
-    </a>
-    <div class="search-wrap">
-      <input
-        id="search"
-        type="search"
-        placeholder="Search name, description, URI…"
-        autocomplete="off"
-        spellcheck="false"
-        aria-label="Search the catalog"
-      />
-      <kbd class="search-hint">/</kbd>
-    </div>
-    <div class="badge" id="protocol-badge">MCP 2025-03-26</div>
-  </header>
-
   <div class="layout">
-    <nav class="sidebar" id="sidebar">
-      <section class="nav-section">
-        <button class="nav-header" data-target="tools-list" aria-expanded="true">
-          <span>Tools</span><span class="count" id="tools-count"></span>
-        </button>
-        <ul class="nav-list" id="tools-list"></ul>
-      </section>
-      <section class="nav-section">
-        <button class="nav-header" data-target="resources-list" aria-expanded="true">
-          <span>Resources</span><span class="count" id="resources-count"></span>
-        </button>
-        <ul class="nav-list" id="resources-list"></ul>
-      </section>
-      <section class="nav-section">
-        <button class="nav-header" data-target="prompts-list" aria-expanded="true">
-          <span>Prompts</span><span class="count" id="prompts-count"></span>
-        </button>
-        <ul class="nav-list" id="prompts-list"></ul>
-      </section>
-    </nav>
-
-    <main class="content" id="content">
-      <p class="hint">Loading the mcpbin catalog from <code>/mcp</code>&hellip;</p>
-    </main>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <img src="logo.svg" width="28" height="28" alt="" />
+        <div>
+          <div class="brand-name">mcpbin</div>
+          <div class="brand-sub">MCP test server</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer" id="sidebar-footer">
+        <span class="sidebar-status" id="sidebar-status">Initializing…</span>
+      </div>
+    </aside>
+    <div class="main-col">
+      <header class="topbar">
+        <div class="search-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="search-input" class="search-input" type="search" placeholder="Search tools, resources, prompts…" autocomplete="off" spellcheck="false" aria-label="Search" />
+          <kbd class="search-hint">/</kbd>
+        </div>
+        <div class="topbar-actions">
+          <span class="status-dot" id="status-dot"></span>
+        </div>
+      </header>
+      <main class="content" id="content"></main>
+    </div>
   </div>
-
-  <div class="no-results" id="no-results" hidden>No matches for &ldquo;<span id="nr-q"></span>&rdquo;.</div>
-
   <script src="app.js"></script>
 </body>
 </html>
