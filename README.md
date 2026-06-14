@@ -19,10 +19,10 @@ Built on [FastMCP](https://github.com/jlowin/fastmcp); targets MCP spec **2025-0
 
 ## Live demo
 
-A hosted instance runs on a free Hugging Face Space:
+A hosted instance runs on a free [Hugging Face Space](https://huggingface.co/spaces/ruhullasheik/mcpbin):
 
-- **Web UI:** `https://<your-space>.hf.space/` _(placeholder — replace once the maintainer creates the Space)_
-- **MCP endpoint:** connect your MCP client to `https://<your-space>.hf.space/mcp` (Streamable HTTP).
+- **Web UI:** https://ruhullasheik-mcpbin.hf.space/
+- **MCP endpoint:** connect your MCP client to `https://ruhullasheik-mcpbin.hf.space/mcp` (Streamable HTTP).
 
 > The free Space **sleeps when idle** and wakes on the next request, so the first hit after a
 > while can take up to ~30 s. It serves the **`full`** profile.
