@@ -48,6 +48,22 @@ CLI flags:
 Structured logs go to **stderr** so you can watch server-side behavior next to your
 client.
 
+### Custom host and port
+
+The HTTP and SSE transports read two environment variables:
+
+| Variable | Default (local) | Description |
+|----------|----------------|-------------|
+| `FASTMCP_HOST` | `127.0.0.1` | Interface to bind to |
+| `FASTMCP_PORT` | `8000` | Port to listen on |
+
+```bash
+# Bind to all interfaces on port 9000
+FASTMCP_HOST=0.0.0.0 FASTMCP_PORT=9000 uv run mcpbin --transport http
+```
+
+The Docker image already sets `FASTMCP_HOST=0.0.0.0` and forwards `$PORT` from the platform (Cloud Run, Render, etc.), so no override is needed there unless you want a non-default port.
+
 ## Capability profiles
 
 | Profile | Advertises | Omitted list methods |
